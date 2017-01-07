@@ -41,6 +41,11 @@ var songId= results.tracks.items[0].id;
 
 $("#battle").on("click", function () {
 
+	$("#user-input, #submit, #battle").hide();
+
+	$("#searchbar").prepend(voteDiv).html("Vote Now!");
+	$("#vote").prepend(vote1, vote2);
+
 //Tells timer to decrease every second
 function run () {
  timer = setInterval(decrement, 1000);
@@ -53,7 +58,7 @@ function decrement () {
 
 //Converts miliseconds into minutes and seconds
 	var converted = timeConverter(counter);
-	$("#timer").html(counter + converted);
+	$("#timer").html(converted);
 
 //Once timer reaches 0, stop the timer
 	if (counter === 0) {
@@ -86,10 +91,5 @@ function timeConverter(t) {
 
   return minutes + ":" + seconds;
 }
-
-	$("#user-input, #submit, #battle").hide();
-
-	$("#searchbar").prepend(voteDiv).html("Vote Now!");
-	$("#vote").prepend(vote1, vote2);
 
 });
