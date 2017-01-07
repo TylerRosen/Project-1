@@ -18,7 +18,7 @@ $("#submit").on("click", function () {
          var trackId = results.tracks.items[0].id;
          var link = "https://open.spotify.com/embed/track/" + trackId;
          console.log(link);
-$('#tracks').append(results.tracks.items[0].name);
+// $('#tracks').append(results.tracks.items[0].name);
 $('#tracks2').append($('<div>').addClass('song').append('<embed src=' + link +'>'));
 return false;
 // var song = "spotify:track:6rqhFgbbKwnb9MLmUQDhG6"
@@ -26,4 +26,12 @@ return false;
 var song = "spotify:track:" + songID 
 var songId= results.tracks.items[0].id;
 });
+});
+
+$("#battle").on("click", function () {
+	$("#user-input, #submit, #battle").hide();
+
+	var voteDiv = $("<div id='vote'>");
+
+	$("#searchbar").prepend(voteDiv).html("Vote Now!");
 });
