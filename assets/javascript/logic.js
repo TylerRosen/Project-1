@@ -4,7 +4,7 @@ var voteDiv = $("<div id='vote'>");
 	var vote1 = $('<input type = "button" value="Vote"/>');
 	var vote2 = $('<input type = "button" value="Vote"/>')
 
-	var counter= 10
+	var counter= 3
 	var timer;
 
 //---------------------------------------------------------------
@@ -62,6 +62,7 @@ function decrement () {
 
 //Once timer reaches 0, stop the timer
 	if (counter === 0) {
+	$("#vote").hide();
 
 	stop();
 
