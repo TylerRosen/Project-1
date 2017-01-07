@@ -32,6 +32,9 @@ $("#battle").on("click", function () {
 	$("#user-input, #submit, #battle").hide();
 
 	var voteDiv = $("<div id='vote'>");
+	var vote1 = $('<input type = "button" value="Vote"/>');
+	var vote2 = $('<input type = "button" value="Vote"/>')
 
 	$("#searchbar").prepend(voteDiv).html("Vote Now!");
+	$("#vote").prepend(vote1, vote2);
 });
