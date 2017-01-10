@@ -4,9 +4,6 @@ var voteDiv = $("<div id='vote'>");
 	var vote1 = $('<input type = "button" value="Vote"/>');
 	var vote2 = $('<input type = "button" value="Vote"/>')
 
-	var counter= 3
-	var timer;
-
 //---------------------------------------------------------------
 
 $("#submit").on("click", function () {
@@ -43,60 +40,6 @@ $("#battle").on("click", function () {
 
 	$("#user-input, #submit, #battle").hide();
 
-	$("#searchbar").prepend(voteDiv).html("Vote Now!");
+	$("#searchbar_1").prepend(voteDiv).html("Vote Now!");
 	$("#vote").prepend(vote1, vote2);
-
-//Tells timer to decrease every second
-function run () {
- timer = setInterval(decrement, 1000);
-}
-
-
-	//Counts down seconds
-function decrement () {
-	counter--;
-
-//Converts miliseconds into minutes and seconds
-	var converted = timeConverter(counter);
-	$("#timer").html(converted);
-
-//Once timer reaches 0, stop the timer
-	if (counter === 0) {
-	$("#vote").hide();
-
-	stop();
-
-  };
-
-  //Creates function to stop timer
-function stop () {
-	clearInterval(timer)
-}
-
-
-};
-
-run();
-
-
-//Converts seconds into minutes
-function timeConverter(t) {
-
-  var minutes = Math.floor(t / 60);
-  var seconds = t - (minutes * 60);
-
-  if (seconds < 10) {
-    seconds = "0" + seconds;
-  }
-
-  if (minutes === 0) {
-    minutes = "00";
-  }
-  else if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-
-  return minutes + ":" + seconds;
-}
-
 });
