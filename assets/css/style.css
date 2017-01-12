@@ -88,9 +88,65 @@ nav {
 	height: 60px;
 }
 
+#wrapper {
+	margin-left: 62px;
+}
+
 
 #container {
 	width: 350px; 
 	height: 350px; 
 	margin: 0 auto;
+}
+
+@media screen and (max-width: 980px) {
+	#name {
+		text-align: center;
+	}
+
+	#music {
+		margin-left: 360px;
+	}
+
+	#wrapper {
+		margin-left: -195px;
+	}
+
+	#joey {
+		margin-left: -110px;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+	#name {
+		text-align: center;
+	}
+
+	#music {
+		margin-left: 240px;
+	}
+
+	#wrapper {
+		margin-left: -315px;
+	}
+
+	#joey {
+		margin-left: 10px;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+	#name {
+		text-align: center;
+	}
+
+	#music {
+		margin-left: 240px;
+	}
+
+	#wrapper {
+		margin-left: -315px;
+	}
 }
