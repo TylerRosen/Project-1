@@ -1,31 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Rate That Song</title>
-</head>
+	<title></title>
 
-<!-- Links CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-<!-- Links Bootstrap -->
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+	<link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+	
+	
+</head>
 <body>
-
 	<header id='topPage'>
-		<h1>Rate That Song.</h1>
+		<div>
+			<h1 id='name'>Song Roulette</h1>
+		</div>	
 	</header>
+	
+	<section>
+		<div id='music'>Music Goes here</div>
 
-	<div id='music'>Music Goes Here</div>
+		<button  class="btn btn-default" id="dislikebutton" type="submit" style="background-color:#516841;color:white;margin-left: 535px;margin-top: 20px;padding: 20px 50px;border: 5px solid black;font-size: 20px;font-family: 'Fugaz One', cursive;">Dislike</button>
 
-	<button  class="btn btn-default" type="submit">Dislike</button>
+		<button class="btn btn-default" id="likebutton" type="submit" style="background-color:#30336f;color: white;margin-left: 10px; margin-top: 20px;padding: 20px 50px;border:5px solid black;font-size: 20px;font-family: 'Fugaz One', cursive;">Like
+			</button>
+	</section>
 
-	<button class="btn btn-default" type="submit">Like</button>
+	<br>
+	<br>
 
-<!-- Jquery -->
-   <script src="https://code.jquery.com/jquery.js"></script>
+	<div id="container" hidden></div>
 
+	<table id="datatable" hidden>
+	    <thead>
+	        <tr>
+	            <th></th>
+	            <th>Likes</th>
+	            <th>Dislikes</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <th>Rating</th>
+	            <td id="likes">0</td>
+	            <td id="dislikes">0</td>
+	        </tr>
+	    </tbody>
+	</table>
+	
+	<nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: black;border: black;color: white;">
+	 	 <div class="container">
+	    	<div id="joey">
+	    		<a href="www.google.com" style="color: white;">Joey Rodrigues</a>
+	    	
+	    	<div id='tyler'>	
+	    		<a href="www.google.com" style="color: white;">Tyler Rosen</a>
+			
+			<div id='braniel'>
+	    		<a href="www.google.com" style="color: white;">Baniel Pichardo</a>
+	    		<div id="copyRight">
+	    			<p>&copy; Rutgers Coding Bootcamp/Purple Parrots</p>
+	    		</div>	
+	    	</div>	
+	    	</div>
+	    	</div>
+	    </div>
+	</nav>
+
+	<!-- Highcharts -->
+
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/data.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+	<!-- Jquery -->
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
 
 </body>
 </html>

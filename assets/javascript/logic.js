@@ -1,45 +1,52 @@
 //Global Variables
 
-var voteDiv = $("<div id='vote'>");
-	var vote1 = $('<input type = "button" value="Vote"/>');
-	var vote2 = $('<input type = "button" value="Vote"/>')
+var likes = $("#likes").val();
+var dislikes = $("#dislikes").val();
 
-//---------------------------------------------------------------
+//-----------------------------------------------------------------
 
-$("#submit").on("click", function () {
-    console.log("Song!");
-    var track = $('#user-input').val().trim();
-    var searchQuery = "";
-    var queryURL = 'https://api.spotify.com/v1/search?q=' + track + '&type=track&limit=1';
-       console.log(queryURL);
-         $.ajax({
-         url: queryURL,
-         method: "GET"
-       })
-       .done(function(response) {
-         var results = response;
-         console.log(results);
-         // console.log(results.tracks.items[0]);
-         console.log(results.tracks.items[0].name);
-         console.log(results.tracks.items[0].artists[0].name);
-         console.log(results.tracks.items[0].id);
-         var trackId = results.tracks.items[0].id;
-         var link = "https://open.spotify.com/embed/track/" + trackId;
-         console.log(link);
-// $('#tracks').append(results.tracks.items[0].name);
-$('#tracks2').append($('<div>').addClass('song').append('<embed src=' + link +'>'));
-return false;
-// var song = "spotify:track:6rqhFgbbKwnb9MLmUQDhG6"
-// song.play();
-var song = "spotify:track:" + songID 
-var songId= results.tracks.items[0].id;
+// Displays graph
+
+function displayChart() {
+    Highcharts.chart('container', {
+        data: {
+            table: 'datatable'
+        },
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Likes vs. Dislikes'
+        },
+        yAxis: {
+            allowDecimals: false,
+            title: {
+                text: 'Units'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    this.point.y + ' ' + this.point.name.toLowerCase();
+            }
+        }
+    });
+
+    $("#datatable").hide();
+};
+
+$("#likebutton").on("click", function () {
+	$("#container").show();
+	likes++;
+	$("#likes").html(likes);
+	displayChart();
+	console.log(likes);
 });
-});
 
-$("#battle").on("click", function () {
-
-	$("#user-input, #submit, #battle").hide();
-
-	$("#searchbar_1").prepend(voteDiv).html("Vote Now!");
-	$("#vote").prepend(vote1, vote2);
+$("#dislikebutton").on("click", function () {
+	$("#container").show();
+	dislikes++;
+	$("#dislikes").html(dislikes);
+	displayChart();
+	console.log(dislikes);
 });
