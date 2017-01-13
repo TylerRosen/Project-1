@@ -99,6 +99,13 @@ nav {
 	margin: 0 auto;
 }
 
+#container {
+  -webkit-animation: pop-in 0.5s; /* Safari 4+ */
+  -moz-animation:    pop-in 0.5s; /* Fx 5+ */
+  -o-animation:      pop-in 0.5s; /* Opera 12+ */
+  animation:         pop-in 0.5s; /* IE 10+, Fx 29+ */
+}
+
 @media screen and (max-width: 980px) {
 	#name {
 		text-align: center;
