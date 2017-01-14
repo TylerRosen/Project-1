@@ -96,6 +96,7 @@ function loadSong() {
             var a = ids[count].likes;
             a++;
             $("#likes").html(a);
+            $("#dislikes").html(0);
             $('#music').empty();
             switcher();
             displayChart ();
@@ -114,6 +115,7 @@ function loadSong() {
             var a = ids[count].likes;
             a++;
             $("#dislikes").html(a);
+            $("#likes").html(0);
             $('#music').empty();
             switcher();
             displayChart ();
