@@ -1,0 +1,188 @@
+@-webkit-keyframes pop-in {
+0% { opacity: 0; -webkit-transform: scale(0.5); }
+100% { opacity: 1; -webkit-transform: scale(1); }
+}
+@-moz-keyframes pop-in {
+0% { opacity: 0; -moz-transform: scale(0.5); }
+100% { opacity: 1; -moz-transform: scale(1); }
+}
+@keyframes pop-in {
+0% { opacity: 0; transform: scale(0.5); }
+100% { opacity: 1; transform: scale(1); }
+}
+
+ body{
+	height: 100%;
+	background-image: url('http://phandroid.s3.amazonaws.com/wp-content/uploads/2014/06/retro-music-devices-pattern.jpg');
+}
+
+#topPage {
+	border: 2px solid black;
+	background-color: black;
+	color: white;
+	opacity: 0.85;
+}
+
+#name {
+	font-family: 'Lilita One', cursive;
+	margin-left: 50px;
+}
+ 
+
+#music {
+	width: 300px;
+	height: 80px;
+	margin: auto;
+	margin-top:50px;
+}
+
+.container {
+	height: 50px;
+}
+
+svg{
+	margin-top:75px;
+}
+
+
+iframe {
+	height:80px;
+	text-align: center;
+   -webkit-animation: pop-in 0.5s; /* Safari 4+ */
+  -moz-animation:    pop-in 0.5s; /* Fx 5+ */
+  -o-animation:      pop-in 0.5s; /* Opera 12+ */
+  animation:         pop-in 0.5s; /* IE 10+, Fx 29+ */
+}
+
+.btn-default {
+	width: 150px;
+	font-family: 'Fugaz One', cursive;
+}
+
+#likebutton{
+	background-color:#516841;
+	border: 5px solid black;
+	margin-left: 75px;
+	color: white;
+}
+#dislikebutton {
+	background-color: #a94442;
+	border: 5px solid black;
+	margin-left: 75px;
+	margin-top: 15px;
+	color: white;
+}
+
+
+#joey {
+	font-family: 'Baumans', cursive;
+	padding-top: 15px;
+
+}
+
+#tyler {
+	font-family: 'Baumans', cursive;
+	border-left: 2px solid #516841;
+	width: 90px;
+	height: 20px;
+	padding-left: 5px;
+	position: relative;
+	left: 110px;
+	bottom: 20px;
+}
+
+#braniel {
+	font-family: 'Baumans', cursive;
+	border-left:2px solid #516841;
+	width: 300px;
+	height: 20px;
+	padding-left: 5px;
+	position: relative;
+	left:85px;
+	bottom:20px;
+	
+}
+#copyRight {
+	font-family: 'Baumans', cursive;
+	position: relative;
+	left:200px;
+	bottom: 22px;
+
+}
+
+
+nav {
+	opacity: 0.85;
+	height: 60px;
+}
+
+#wrapper {
+	margin-left: 62px;
+}
+
+
+#container {
+	width: 350px; 
+	height: 350px; 
+	margin: 0 auto;
+}
+
+#container {
+  -webkit-animation: pop-in 0.5s; /* Safari 4+ */
+  -moz-animation:    pop-in 0.5s; /* Fx 5+ */
+  -o-animation:      pop-in 0.5s; /* Opera 12+ */
+  animation:         pop-in 0.5s; /* IE 10+, Fx 29+ */
+}
+
+
+@media screen and (max-width: 980px) {
+	#name {
+		text-align: center;
+	}
+
+	#music {
+		margin-left: 360px;
+	}
+
+	#wrapper {
+		margin-left: -195px;
+	}
+
+	#joey {
+		margin-left: -110px;
+	}
+
+}
+
+@media screen and (max-width: 768px) {
+	#name {
+		text-align: center;
+	}
+
+	#music {
+		margin-left: 240px;
+	}
+
+	#wrapper {
+		margin-left: -315px;
+	}
+
+	#joey {
+		margin-left: 10px;
+	}
+
+}
+
+@media screen and (max-width: 640px) {
+	#name {
+		text-align: center;
+	}
+
+	#music {
+		margin-left: 240px;
+	}
+
+	#wrapper {
+		margin-left: -315px;
+	}
+}

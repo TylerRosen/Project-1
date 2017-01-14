@@ -63,7 +63,6 @@ function loadSong() {
         var spotifyId = childSnapshot.val().spotifyId;
         //here we store the id of the song that was liked/disliked
 
-        // '<button class="btn btn-default" id="likebutton" type="submit" style="background-color:#30336f;color: white;margin-left: 10px; margin-top: 20px;padding: 20px 50px;border:5px solid black;font-size: 20px;font-family: 'Fugaz One', cursive;">Like</button>'
 
         var likeB = $('<button>').text('like').addClass('btn btn-default').attr('data-spotifyKey', childSnapshot.key).attr('data-type', 'like').attr('id', 'likebutton');
 
@@ -74,9 +73,8 @@ function loadSong() {
             .addClass('song').attr("id", "resultD_")
             .append($("<iframe src=" + link + " value='hello'></iframe>"))).append(likeB).append(dislikeB);
 
-        // $('button').on('click', function() {
-        //     var spotifyKey = $(this).attr('data-spotifyKey');
-        //     var type = $(this).attr('data-type');
+        	// Adds likes to graph
+
 
             $("#likebutton").on("click", function () {
                 var spotifyKey = $(this).attr('data-spotifyKey');
@@ -87,6 +85,8 @@ function loadSong() {
                 displayChart();
                 console.log(likes);
             });
+
+            // Adds dislikes to graph
 
             $("#dislikebutton").on("click", function () {
                 var spotifyKey = $(this).attr('data-spotifyKey');
