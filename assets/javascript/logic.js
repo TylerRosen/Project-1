@@ -1,3 +1,41 @@
+//Global Variables
+
+var likes = $("#likes").val();
+var dislikes = $("#dislikes").val();
+
+//-----------------------------------------------------------------
+// Displays graph
+
+function displayChart() {
+    console.log("hello");
+    Highcharts.chart('container', {
+        data: {
+            table: 'datatable'
+        },
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Likes vs. Dislikes'
+        },
+        yAxis: {
+            allowDecimals: false,
+            title: {
+                text: 'Units'
+            }
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    this.point.y + ' ' + this.point.name.toLowerCase();
+            }
+        }
+    });
+
+    $("#datatable").hide();
+};
+
+
 $( document ).ready(function() {
 //firebase configuration
 var config = {
@@ -27,19 +65,39 @@ function loadSong() {
 
         // '<button class="btn btn-default" id="likebutton" type="submit" style="background-color:#30336f;color: white;margin-left: 10px; margin-top: 20px;padding: 20px 50px;border:5px solid black;font-size: 20px;font-family: 'Fugaz One', cursive;">Like</button>'
 
-        var likeB = $('<button>').text('like').addClass('btn btn-default').attr('data-spotifyKey', childSnapshot.key).attr('data-type', 'like');
+        var likeB = $('<button>').text('like').addClass('btn btn-default').attr('data-spotifyKey', childSnapshot.key).attr('data-type', 'like').attr('id', 'likebutton');
 
-        var dislikeB = $('<button>').text('dislike').addClass('btn btn-default').attr('data-spotifyKey', childSnapshot.key).attr('data-type', 'dislike');
+        var dislikeB = $('<button>').text('dislike').addClass('btn btn-default').attr('data-spotifyKey', childSnapshot.key).attr('data-type', 'dislike').attr('id', 'dislikebutton');
         //creates new div and populates it with a song
         var link = "https://open.spotify.com/embed/track/" + spotifyId;
         $('#music').append($('<div>')
             .addClass('song').attr("id", "resultD_")
             .append($("<iframe src=" + link + " value='hello'></iframe>"))).append(likeB).append(dislikeB);
 
-        $('button').on('click', function() {
-            var spotifyKey = $(this).attr('data-spotifyKey');
-            var type = $(this).attr('data-type');
-            alert(spotifyKey + " " + type);
+        // $('button').on('click', function() {
+        //     var spotifyKey = $(this).attr('data-spotifyKey');
+        //     var type = $(this).attr('data-type');
+
+            $("#likebutton").on("click", function () {
+                var spotifyKey = $(this).attr('data-spotifyKey');
+                var type = $(this).attr('data-type');
+                $("#container").show();
+                likes++;
+                $("#likes").html(likes);
+                displayChart();
+                console.log(likes);
+            });
+
+            $("#dislikebutton").on("click", function () {
+                var spotifyKey = $(this).attr('data-spotifyKey');
+                var type = $(this).attr('data-type');
+                $("#container").show();
+                dislikes++;
+                $("#dislikes").html(dislikes);
+                displayChart();
+                console.log(dislikes);
+            });
+            // alert(spotifyKey + " " + type);
             
             // database.ref().set({
 
@@ -70,7 +128,6 @@ function loadSong() {
             // });
 
             return false;
-        })
     });
 }
 loadSong();
