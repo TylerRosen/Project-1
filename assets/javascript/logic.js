@@ -91,11 +91,29 @@ function loadSong() {
             .addClass('song').attr("id", "resultD_")
             .append($("<iframe src=" + link + " value='hello'></iframe>"))).append(likeB).append(dislikeB);
 
-        $('button').on('click', function() {
+        $(likeB).on('click', function() {
             count++;
             var a = ids[count].likes;
             a++;
             $("#likes").html(a);
+            $('#music').empty();
+            switcher();
+            displayChart ();
+            //keeps count of likes
+            var spotifyKey = $(this).attr('data-spotifyKey');
+            var type = $(this).attr('data-type');
+            // alert(spotifyKey + " " + type);
+            console.log(a);
+            
+            
+            return false;
+        });
+
+        $(dislikeB).on('click', function() {
+            count++;
+            var a = ids[count].likes;
+            a++;
+            $("#dislikes").html(a);
             $('#music').empty();
             switcher();
             displayChart ();
