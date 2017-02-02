@@ -7,7 +7,7 @@ Have you ever wanted to quickly rate a song without having to dig for it on Spot
 ## Contributors:
 
 * Tyler Rosen [GitHub](https://github.com/TylerRosen)
-* Joey Rodrigues [GitHub](
+* Joey Rodrigues [GitHub](https://github.com/Joeyrodrigues92)
 * Braniel Pichardo [GitHub](
 
 ##Technologies Used:
