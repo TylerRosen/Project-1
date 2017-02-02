@@ -23,7 +23,7 @@ Have you ever wanted to quickly rate a song without having to dig for it on Spot
   
  ## APIs
  
- * Primary:
+* Primary:
   * Spotify
   
 ## Code We're Proud of:
