@@ -1,101 +1,104 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Song Roulette</title>
 
-      <!-- Links CSS -->
+<head>
+    <title>Song Roulette</title>
 
-      <link rel="stylesheet" type="text/css" href="assets/css/style-user.css">
+    <!-- Links CSS -->
 
-      <!-- Links Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style-user.css">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Links Bootstrap -->
 
-      <!-- Links Google API -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
-      <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
+    <!-- Links Google API -->
 
-      <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
 
-   </head>
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
 
-   <body>
+</head>
 
-   <!-- Header -->
-      <header id="topPage">
-         <div>
+<body>
+
+    <!-- Header -->
+    <header id="topPage">
+        <div>
             <h1 id="name">Song Roulette</h1>
-         </div>
-      </header>
+        </div>
+    </header>
 
-      <!-- Displays Song -->
-      <div id="music">Music Goes here</div>
+    <!-- Displays Song -->
+    <div id="music">Music Goes here</div>
 
-      <!-- Spaces out graph -->
+    <!-- Spaces out graph -->
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-      <!--Hides graph until button is clicked  -->
+    <!--Hides graph until button is clicked  -->
 
-      <div id="container"></div>
-      <table id="datatable" hidden>
-         <thead>
+    <div id="container"></div>
+    <table id="datatable" hidden>
+        <thead>
             <tr>
-               <th></th>
-               <th>Likes</th>
-               <th>Dislikes</th>
+                <th></th>
+                <th>Likes</th>
+                <th>Dislikes</th>
             </tr>
-         </thead>
-         <tbody>
+        </thead>
+        <tbody>
             <tr>
-               <th>Rating</th>
-               <td id="likes">0</td>
-               <td id="dislikes">0</td>
+                <th>Rating</th>
+                <td id="likes">0</td>
+                <td id="dislikes">0</td>
             </tr>
-         </tbody>
-      </table>
+        </tbody>
+    </table>
 
-      <!-- Footer -->
+    <!-- Footer -->
 
-      <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: black;border: black;color: white;">
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color: black;border: black;color: white;">
 
-         <div class="container">
+        <div class="container">
 
-         <div id="joey">
-            <a href="www.google.com" style="color: white;">Joey Rodrigues</a>
+            <div id="joey">
+                <a href="www.google.com" style="color: white;">Joey Rodrigues</a>
 
-            <div id="tyler">
-               <a href="www.google.com" style="color: white;">Tyler Rosen</a>
+                <div id="tyler">
+                    <a href="www.google.com" style="color: white;">Tyler Rosen</a>
 
-               <div id="braniel">
-                  <a href="www.google.com" style="color: white;">Baniel Pichardo</a>
+                    <div id="braniel">
+                        <a href="www.google.com" style="color: white;">Baniel Pichardo</a>
 
-                  <div id="copyRight">
-                     <p>&copy; Rutgers Coding Bootcamp/Purple Parrots</p>
+                        <div id="copyRight">
+                            <p>&copy; Rutgers Coding Bootcamp/Purple Parrots</p>
 
-                  </div>
-               </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </nav>
+    </nav>
 
-      <!-- Highcharts -->
-      <script src="https://code.highcharts.com/highcharts.js"></script>
-      <script src="https://code.highcharts.com/modules/data.js"></script>
-      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <!-- Highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-      <!-- Jquery -->
-      <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+    <!-- Jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
 
-      <!-- Firebase -->
-      <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
 
-      <!-- Javascript -->
-      <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
 
-   </body>
+</body>
+
 </html>
