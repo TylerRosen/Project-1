@@ -8,9 +8,9 @@ Have you ever wanted to quickly rate a song without having to dig for it on Spot
 
 * Tyler Rosen [GitHub](https://github.com/TylerRosen)
 * Joey Rodrigues [GitHub](https://github.com/Joeyrodrigues92)
-* Braniel Pichardo [GitHub](
+* Braniel Pichardo [GitHub](https://github.com/branieljose)
 
-##Technologies Used:
+## Technologies Used:
 
 * HTML
 * CSS
@@ -25,7 +25,3 @@ Have you ever wanted to quickly rate a song without having to dig for it on Spot
  
 * Primary:
   * Spotify
-  
-## Code We're Proud of:
-
-## Liscense
