@@ -6,7 +6,7 @@ var dislikes = $("#dislikes").val();
 //----------------------------------------------------------------
 
 
-$( document ).ready(function() {
+$(document).ready(function() {
 //firebase configuration
 var config = {
     apiKey: "AIzaSyD80Gu2sk47F3EZtbzaORhXzDILBAIUsbc",
